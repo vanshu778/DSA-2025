@@ -148,6 +148,13 @@ cin>>n;
 // 22
 // 1
 
+// for (int row=0; row<n; row++){
+//     for(int col=0; col<=n-row-1; col++){
+//         cout<<n-row;
+//     }
+//     cout<<endl;
+// }
+
 // Pattern 12
 // 11111
 // 2222
@@ -155,24 +162,68 @@ cin>>n;
 // 44
 // 5
 
+// for (int row=0; row<n; row++){
+//     for(int col=0; col<=n-row-1; col++){
+//         cout<<row+1;
+//     }
+//     cout<<endl;
+// }
+
 // Pattern 13
 // 12345
 // 4321
 // 123
 // 21
 // 1
+    // Outer loop to handle each row
+    // for (int row = 1; row <= n; row++) {
+    //     if (row % 2 != 0) {
+    //         // If it's an odd row, print numbers in increasing order
+    //         for (int col = 1; col <= (n - row + 1); col++) {
+    //             cout << col;
+    //         }
+    //     } else {
+    //         // If it's an even row, print numbers in decreasing order
+    //         for (int col = (n - row + 1); col >= 1; col--) {
+    //             cout << col;
+    //         }
+    //     }
+    //     cout << endl;
+    // }
+
+
 
 // Pattern 14
 // 1234567
 // 12345
 // 123
 // 1
+// int m;
+// cin>>m;
+// for (int row=0; row<n; row++){
+//     for(int col=1; col<=m-2*row; col++){
+//         cout<<col;
+//     }
+//     cout<<endl;
+// }
 
 // Pattern 15
 // 1
 // 01
 // 101
 // 0101
+
+  for (int row=0; row<n; row++){
+    for(int col=0; col<=row; col++){
+        if((row+col)%2 ==0){
+            cout<<"1";
+        }
+        else{
+            cout<<"0";
+        }
+    }
+    cout<<endl;
+}
 
 // Pattern 16
 // 13579
