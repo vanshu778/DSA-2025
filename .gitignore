@@ -1,1 +1,5 @@
-*.exe
+/DSA-2025
+    /patterns
+        Alphabet_pattern.exe
+        Number_pattern.exe
+        Star_pattern.exe
