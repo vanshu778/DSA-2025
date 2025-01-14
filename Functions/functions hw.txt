@@ -1,0 +1,13 @@
+1. write a function to display area of circle.
+2. find number is even or odd.
+3. find factorial of a number.
+4. Check Number is prime or not.
+5. Print all prime number from 1 to N.
+6. Print all digits in an integer.
+7. Create a number using digits.
+8. Print number of set bits.
+9. Print binary equivalent of a decimal number.
+10. Convert distance in km to miles.
+11. Reverse an integer.
+12. set ith bit.
+13. Convert celsius to fahrenheit.
