@@ -213,17 +213,17 @@ cin>>n;
 // 101
 // 0101
 
-  for (int row=0; row<n; row++){
-    for(int col=0; col<=row; col++){
-        if((row+col)%2 ==0){
-            cout<<"1";
-        }
-        else{
-            cout<<"0";
-        }
-    }
-    cout<<endl;
-}
+//   for (int row=0; row<n; row++){
+//     for(int col=0; col<=row; col++){
+//         if((row+col)%2 ==0){
+//             cout<<"1";
+//         }
+//         else{
+//             cout<<"0";
+//         }
+//     }
+//     cout<<endl;
+// }
 
 // Pattern 16
 // 13579
@@ -232,12 +232,34 @@ cin>>n;
 // 79
 // 9
 
+// int start=1;
+// for(int row=0; row<n; row++){
+//     int num=start;
+//     for(int col=0; col<n-row; col++){
+//         cout<<num;
+//         num+=2;
+//     }
+//     cout<<endl;
+//     start+=2;
+// }
+
 // Pattern 17
 // 1
 // 2 4
 // 1 3 5
 // 2 4 6 8
 // 1 3 5 7 9
+
+// for (int row = 0; row < n; row++) {
+//         int num = (row % 2 == 0) ? 1 : 2; // Start with 1 for odd rows, 2 for even rows
+        
+//         for (int col = 0; col <= row; col++) {
+//             cout << num << " "; // Print the current number
+//             num += 2; // Increment by 2 to get the next odd or even number
+//         }
+        
+//         cout << endl; // Move to the next row
+//     }
 
 // Pattern 18
 // 55555
@@ -246,11 +268,33 @@ cin>>n;
 // 23455
 // 12345
 
+// for (int row = 0; row < n; row++) {
+//         // Print numbers in the pattern
+//         for (int col = 0; col < n; col++) {
+//             if (col < row)
+//                 cout << (n - row + col);
+//             else
+//                 cout << n;
+//         }
+//         cout << endl;
+//     }
+
+
+
 // Pattern 19
 // 1
 // 23
 // 456
 // 78910
+
+//  int num = 1;
+//   for(int row = 1; row <= n; row++) {
+//       for(int col = 1; col <= row; col++) {
+//           cout << num++;
+//       }
+//       cout << endl;
+//   }
+
 
 // Pattern 20
 // 1
@@ -259,6 +303,17 @@ cin>>n;
 // 1010
 // 10101
 
+//  for (int row = 0; row < n; row++) {
+//         for (int col = 0; col <= row; col++) {
+//             // Print 1 for even column index, 0 for odd column index
+//             if (col % 2 == 0)
+//                 cout << "1";
+//             else
+//                 cout << "0";
+//         }
+//         cout << endl;
+//     }
+  
 // Pattern 21
 // 1
 // 2 6
