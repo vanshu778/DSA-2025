@@ -717,6 +717,17 @@ cin>>n;
 // 3421
 // 4321
 
+//   for(int row = 1; row <= n; row++) {
+//       for(int col = row; col <= n; col++) {
+//           cout << col;
+//       }
+//       for(int col = 1; col < row; col++) {
+//           cout << col;
+//       }
+//       cout << endl;
+//   }
+
+
 // Pattern 42
 // 11111
 // 0000
@@ -724,13 +735,40 @@ cin>>n;
 // 00
 // 1
 
+// for(int row = n; row >= 1; row -= 2) {
+//       for(int col = 0; col < row; col++) {
+//           cout << "1";
+//       }
+//       cout << endl;
+//       for(int col = 0; col < row-1; col++) {
+//           cout << "0";
+//       }
+//       cout << endl;
+//   }
 
 // Pattern 43
-// 1
-// 4   9  16
-// 25  36  49  64  81
-// 100 121 144 169 196 225 256
+//                1
+//            4   9  16
+//        25  36  49  64  81
+//    100 121 144 169 196 225 256
 // 289 324 361 400 441 484 529 576 625
+
+//  int num = 1;  // Starting number
+//  for (int row = 1; row <= n; row++) {
+// Loop to print leading spaces for right alignment
+//     for (int col = 1; col <= n - row; col++) {
+//           cout << "    ";  // 4 spaces
+//       }
+
+// Loop to print the squares of consecutive numbers
+//     for (int col = 1; col <= 2 * row - 1; col++) {
+//        cout << setw(4) << num * num << " ";  // Print square of num
+//   num++;  // Increment num for next square
+//}
+
+//cout << endl; 
+//     }
+
 
 // Pattern 44
 // 11111
@@ -739,30 +777,97 @@ cin>>n;
 // 1   1
 // 11111
 
+//   for(int row = 1; row <= n; row++) {
+//       for(int col = 1; col <= n; col++) {
+//           if(row == 1 || row == 5 || col == 1 || col == 5)
+//               cout << "1";
+//           else
+//               cout << " ";
+//       }
+//       cout << endl;
+//   }
+
 // Pattern 45
-// 1
-// 1 2
-// 1 2 3
-// 1 2 3 4
+//     1
+//    1 2
+//   1 2 3
+//  1 2 3 4
 // 1 2 3 4 5
 
+//   for (int i = 1; i <= n; i++) {
+// Loop for printing spaces to right-align the numbers
+//         for (int j = 1; j <= n - i; j++) {
+//             cout << " ";  // Print space
+//         }
+
+// Loop to print numbers starting from 1 up to i
+//         for (int j = 1; j <= i; j++) {
+//             cout << j << " ";  // Print numbers separated by a space
+//         }
+
+//         cout << endl; 
+//     }
+
+
 // Pattern 46
-// 1
-// 123
-// 12345
-// 1234567
+//     1
+//    123
+//   12345
+//  1234567
 // 123456789
-// 1234567
-// 12345
-// 123
-// 1
+//  1234567
+//   12345
+//    123
+//     1
 
+// Loop for the upper half of the pattern
+    // for (int row = 1; row <= n; row++) {
+    //     // Print spaces for alignment
+    //     for (int col = 1; col <= n - row; col++) {
+    //         cout << " ";  // Print space
+    //     }
 
-// Pattern 47
-// 000000*
-// 000000
-// 000000
-// 000***000
+    //     // Print increasing numbers
+    //     for (int col = 1; col <= 2 * row - 1; col++) {
+    //         cout << col;  // Print numbers from 1 to (2 * row - 1)
+    //     }
+
+    //     cout << endl;  // Move to the next line after each row
+    // }
+
+    // // Loop for the lower half of the pattern (mirror of the upper half)
+    // for (int row = n - 1; row >= 1; row--) {
+    //     // Print spaces for alignment
+    //     for (int col = 1; col <= n - row; col++) {
+    //         cout << " ";  // Print space
+    //     }
+
+    //     // Print increasing numbers
+    //     for (int col = 1; col <= 2 * row - 1; col++) {
+    //         cout << col;  // Print numbers from 1 to (2 * row - 1)
+    //     }
+
+    //     cout << endl;  
+    // }
+
+ // Pattern 47
+  // *000*000*
+  // 0*00*00*0
+  // 00*0*0*00
+  // 000***000
+
+// for (int row = 1; row <= n; row++) {
+//       for (int col = 1; col <= n; col++) {
+//           if (row == col) cout << "*";
+//           else cout << "0";
+//       }
+//       for (int col = n; col >= 1; col--) {
+//           if (col == row) cout << "*";
+//           else cout << "0";
+//       }
+//       cout << endl;
+//   }
+
 
 // Pattern 48
 // 5 5 5 5 5 5 5 5 5
@@ -775,12 +880,28 @@ cin>>n;
 // 5 4 4 4 4 4 4 4 5
 // 5 5 5 5 5 5 5 5 5
 
+// for (int row = 1; row <= 2 * n - 1; row++) {
+//       for (int col = 1; col <= 2 * n - 1; col++) {
+//           cout << max(abs(n - row), abs(n - col)) + 1 << " ";
+//       }
+//       cout << endl;
+//   }
+
 // Pattern 49
 // 1
 // 1 1
 // 1 2 1
 // 1 3 3 1
 // 1 4 6 4 1
+
+//   for (int row = 0; row < n; row++) {
+//       int coef = 1;
+//       for (int col = 0; col <= row; col++) {
+//           cout << coef << " ";
+//           coef = coef * (row - col) / (col + 1);
+//       }
+//       cout << endl;
+//   }
 
 // Pattern 50
 // 1
@@ -793,6 +914,14 @@ cin>>n;
 // 8 16 24 32 40 48 56 64
 // 9 18 27 36 45 54 63 72 81
 // 10 20 30 40 50 60 70 80 90 100
+
+// for (int i = 1; i <= n; i++) {
+//         // Loop through each column in the row
+//         for (int j = 1; j <= i; j++) {
+//             cout << i * j << " "; // Print multiples of i
+//         }
+//         cout << endl; 
+// }
 
 // Pattern 51
 // 1
