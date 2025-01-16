@@ -1,4 +1,5 @@
-#include<iostream>
+#include <iomanip>
+#include <iostream>
 using namespace std;
 
 int main(){
@@ -321,21 +322,55 @@ cin>>n;
 // 4 8 11 13
 // 5 9 12 14 15
 
+//   for(int row = 1; row <= n; row++) {
+//       int num = row;
+//       for(int col = 1; col <= row; col++) {
+//           cout << num << " ";
+//           num += n - col;
+//       }
+//       cout << endl;
+//   }
+
 // Pattern 22
 // 1
 // 123
 // 12345
 // 1234567
+//   for (int row = 0; row < n; row++) {
+//         for (int col = 0; col <= 2 * row; col++) {
+//             cout << col + 1;
+//         }
+//         cout << endl;
+//     }
 
 // Pattern 23
 // 12344321
-// 123321
-// 1221
-// 11
+// 123**321
+// 12****21
+// 1******1
+
+// for (int row = 1; row <= n; row++) {
+//         // Print the first half of the pattern (numbers)
+//         for (int col = 1; col <= n - row + 1; col++) {
+//             cout << col;
+//         }
+
+//         // Print the stars
+//         for (int col = 1; col <= (2 * row - 2); col++) {
+//             cout << "*";
+//         }
+
+//         // Print the second half of the pattern (numbers)
+//         for (int col = n - row + 1; col >= 1; col--) {
+//             cout << col;
+//         }
+
+//         cout << endl;
+//     }
 
 // Pattern 24
-// 1
-// 2 3 4
+//     1
+//   2 3 4
 // 5 6 7 8 9
 
 // Pattern 25
@@ -349,6 +384,50 @@ cin>>n;
 // 30  59  80  79  78  77  76  75  50  17
 // 29  58  57  56  55  54  53  52  51  18
 // 28  27  26  25  24  23  22  21  20  19
+
+// int arr[n][n];
+//     int num = 1;
+    
+//     int rowStart = 0, rowEnd = n - 1, colStart = 0, colEnd = n - 1;
+
+//     // Loop to fill the array in spiral order
+//     while (rowStart <= rowEnd && colStart <= colEnd) {
+//         // Fill the top row
+//         for (int col = colStart; col <= colEnd; col++) {
+//             arr[rowStart][col] = num++;
+//         }
+//         rowStart++;
+        
+//         // Fill the rightmost column
+//         for (int row = rowStart; row <= rowEnd; row++) {
+//             arr[row][colEnd] = num++;
+//         }
+//         colEnd--;
+        
+//         // Fill the bottom row
+//         if (rowStart <= rowEnd) {
+//             for (int col = colEnd; col >= colStart; col--) {
+//                 arr[rowEnd][col] = num++;
+//             }
+//             rowEnd--;
+//         }
+        
+//         // Fill the leftmost column
+//         if (colStart <= colEnd) {
+//             for (int row = rowEnd; row >= rowStart; row--) {
+//                 arr[row][colStart] = num++;
+//             }
+//             colStart++;
+//         }
+//     }
+    
+//     // Print the spiral matrix
+//     for (int row = 0; row < n; row++) {
+//         for (int col = 0; col < n; col++) {
+//             cout << arr[row][col] << "\t";
+//         }
+//         cout << endl;
+//     }
 
 // Pattern 26
 // 11111
