@@ -436,18 +436,44 @@ cin>>n;
 // 22
 // 1
 
+
 // Pattern 27
 // 5432*
-// 5431
-// 5421
-// 5321
-// 4321
+// 543*1
+// 54*21
+// 5*321
+// *4321
+
+
+// for (int i = 1; i <= 5; i++) { // Loop for rows
+//  for (int j = 5; j >= 1; j--) { // Loop for columns
+//      if (j == i) {
+//          cout << "*"; // Print '*' when column index matches the row index
+//      } 
+//    else {
+//       cout << j; // Print the column number otherwise
+//     }
+//  }
+//cout << endl; // Move to the next line
+//}
 
 // Pattern 28
 // 1
 // 121
 // 12321
 // 1234321
+
+// for (int row = 1; row <= n; row++) {
+//         // Print the increasing part
+//         for (int col = 1; col <= row; col++) {
+//             cout << col;
+//         }
+//         // Print the decreasing part
+//         for (int col = row - 1; col >= 1; col--) {
+//             cout << col;
+//         }
+//         cout << endl; // Move to the next line
+//     }
 
 // Pattern 29
 // 0
@@ -461,12 +487,45 @@ cin>>n;
 // 23456789098765432
 // 1234567890987654321
 
+//  for(int row = 0; row <= n; row++) {
+//       for(int col = row; col >= 0; col--) {
+//           cout << col;
+//       }
+//       for(int col = 1; col <= row; col++) {
+//           cout << col;
+//       }
+//       cout << endl;
+//   }
+
+
 // Pattern 30
 // 1        1
 // 12      21
 // 123    321
 // 1234  4321
 // 1234554321
+
+// int spaces = (n - 1) * 2; // Initial spaces
+
+//     for (int row = 1; row <= n; row++) {
+//         // Print the left half (increasing numbers)
+//         for (int col = 1; col <= row; col++) {
+//             cout << col;
+//         }
+
+//         // Print spaces
+//         for (int s = 1; s <= spaces; s++) {
+//             cout << " ";
+//         }
+//         spaces -= 2; // Reduce spaces by 2 for the next row
+
+//         // Print the right half (decreasing numbers)
+//         for (int col = row; col >= 1; col--) {
+//             cout << col;
+//         }
+
+//         cout << endl; 
+//     }
 
 // Pattern 31
 // 1
