@@ -528,11 +528,21 @@ cin>>n;
 //     }
 
 // Pattern 31
-// 1
-// 21
-// 321
-// 4321
+//     1
+//    21
+//   321
+//  4321
 // 54321
+
+//   for(int row = 1; row <= n; row++) {
+//       for(int col = 1; col <= n - row; col++) {
+//           cout << " ";
+//       }
+//       for(int col = row; col >= 1; col--) {
+//           cout << col;
+//       }
+//       cout << endl;
+//   }
 
 // Pattern 32
 // 1
@@ -540,35 +550,107 @@ cin>>n;
 // 45654
 // 78910987
 
+//   int num = 1;
+//   for (int row = 1; row <= n; row++) {
+//         // First part: Incrementing numbers
+//         for (int col = 1; col <= row; col++) {
+//             cout << num++;
+//         }
+
+//         // Second part: Decrementing numbers
+//         for (int col = row - 1; col >= 1; col--) {
+//             cout << num - col - 1;
+//         }
+//       cout << endl;
+//   }
+
 // Pattern 33
-// 1
-// 22
-// 333
-// 4444
-// 4444
-// 333
-// 22
-// 1
+  // 1
+  // 2*2
+  // 3*3*3
+  // 4*4*4*4
+  // 4*4*4*4
+  // 3*3*3
+  // 2*2
+  // 1
+
+// Top half (1 to n)
+    // for (int row = 1; row <= n; row++) {
+    //     for (int col = 1; col <= row; col++) {
+    //         cout << row;
+    //         if (col < row) {
+    //             cout << "*"; // Add '*' between numbers
+    //         }
+    //     }
+    //     cout << endl; // Move to the next row
+    // }
+
+    // Bottom half (n to 1)
+    // for (int row = n; row >= 1; row--) {
+    //     for (int col = 1; col <= row; col++) {
+    //         cout << row;
+    //         if (col < row) {
+    //             cout << "*"; // Add '*' between numbers
+    //         }
+    //     }
+    //     cout << endl; // Move to the next row
+    // }
 
 // Pattern 34
 // 11
 // 12 13
 // 13 14 15
 // 14 15 16 17
+    // int start = 11; // Starting number
+
+    // for (int row = 1; row <= n; row++) {
+    //     int num = start; // Starting number for the current row
+    //     for (int col = 1; col <= row; col++) {
+    //         cout << num << " ";
+    //         num++; // Increment the number for each column
+    //     }
+    //     cout << endl; 
+    //     start++; // Increment the starting number for the next row
+    // }
 
 // Pattern 35
-// 1
-// 2 3
-// 4 5 6
-// 7 8 9 10
+//              1
+//            2 3
+//          4 5 6
+//       7 8 9 10
 // 11 12 13 14 15
 
+//   int num = 1;
+//   for(int i = 1; i <= 5; i++) {
+//       for(int k = 1; k <= 5 - i; k++) {
+//           cout << "   ";
+//       }
+//       for(int j = 1; j <= i; j++) {
+//           cout << setw(2) << num++ << " ";
+//       }
+//       cout << endl;
+//   }
+
 // Pattern 36
-// 5
-// 54
-// 543
-// 5432
+//     5
+//    54
+//   543
+//  5432
 // 54321
+
+    // for (int row = 1; row <= n; row++) {
+    //     // Print leading spaces for right alignment
+    //     for (int space = 1; space <= n - row; space++) {
+    //         cout << " "; // Single space for alignment
+    //     }
+
+    //     // Print numbers in decreasing order
+    //     for (int num = 5; num >= 5 - row + 1; num--) {
+    //         cout << num; // Print the decreasing number
+    //     }
+
+    //     cout << endl; 
+    // }
 
 // Pattern 37
 // 1
@@ -576,12 +658,39 @@ cin>>n;
 // 32123
 // 4321234
 
+// for (int row = 1; row <= n; row++) {
+//         // Print decreasing numbers from i to 1
+//     for (int col = row; col >= 1; col--) {
+//         cout << col;
+//     }
+
+//         // Print increasing numbers from 2 to i + 1
+//     for (int col = 2; col <= row; col++) {
+//         cout << col;
+//     }
+
+//     cout << endl;
+// }
+
 // Pattern 39
 // 1
 // 23
 // 345
 // 4567
 // 56789
+// int num;
+
+//     for (int row = 1; row <= n; row++) {
+//         num = row; // Start number for each row
+
+//         // Print numbers in each row
+//         for (int col = 1; col <= row; col++) {
+//             cout << num++;
+//         }
+        
+//         cout << endl;
+//     }
+
 
 // Pattern 40
 // 1  2  3  4  5
@@ -589,6 +698,17 @@ cin>>n;
 // 10 11 12
 // 13 14
 // 15
+
+//  int num = 1;  // Start number for the pattern
+// Loop to print each row
+//     for (int row = n; row >= 1; row--) {
+// Print i numbers in each row
+//         for (int col = 1; col <= row; col++) {
+//             cout << num++ << " ";  // Print current number and increment
+//         }
+//         cout << endl;
+//     }
+
 
 
 // Pattern 41
