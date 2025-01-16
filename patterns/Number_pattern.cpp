@@ -3,8 +3,8 @@
 using namespace std;
 
 int main(){
-int n;
-cin>>n;
+// int n;
+// cin>>n;
 // pattern1: 
 // 12345
 // 1234
@@ -915,10 +915,10 @@ cin>>n;
 // 9 18 27 36 45 54 63 72 81
 // 10 20 30 40 50 60 70 80 90 100
 
-// for (int i = 1; i <= n; i++) {
+// for (int row = 1; row <= n; row++) {
 //         // Loop through each column in the row
-//         for (int j = 1; j <= i; j++) {
-//             cout << i * j << " "; // Print multiples of i
+//         for (int col = 1; col <= row; col++) {
+//             cout << row * col << " "; // Print multiples of i
 //         }
 //         cout << endl; 
 // }
@@ -930,12 +930,34 @@ cin>>n;
 // 13 21 34 55
 // 89 144 233 377 610
 
+//  int a = 1, b = 1, next;
+//     for (int row = 1; row <= n; row++) {
+//         // Loop for each column (j) in the current row
+//         for (int col = 1; col <= row; col++) {
+//             cout << a << " ";  // Print the current Fibonacci number
+//             next = a + b;  // Calculate the next Fibonacci number
+//             a = b;  // Update a to the previous Fibonacci number
+//             b = next;  // Update b to the new Fibonacci number
+//         }
+//         cout << endl; 
+//     }
+
 // Pattern 52
 // 11111
 // 10001
 // 10001
 // 10001
 // 11111
+
+//   for(int row = 1; row <= n; row++) {
+//       for(int col = 1; col <= n; col++) {
+//           if(row == 1 || row == n || col == 1 || col == n)
+//               cout << "1";
+//           else
+//               cout << "0";
+//       }
+//       cout << endl;
+//   }
 
 
 // Pattern 53
@@ -945,6 +967,14 @@ cin>>n;
 // 4 3 2 1 2
 // 5 4 3 2 1
 
+//   for (int row = 1; row <= n; row++) {
+//       for (int col = 1; col <= n; col++) {
+//           cout << abs(row - col) + 1 << " ";
+//       }
+//       cout << endl;
+//   }
+
+
 // Pattern 54
 // 1
 // 3 2
@@ -952,6 +982,21 @@ cin>>n;
 // 10 9 8 7
 // 11 12 13 14 15
 
+//   int num = 1;
+//   for (int row = 1; row <= n; row++) {
+//       if (row % 2 == 1) {
+//           for (int col = 1; col <= row; col++) {
+//               cout << num++ << " ";
+//           }
+//       } else {
+//           int temp = num + row - 1;
+//           for (int col = 1; col <= row; col++) {
+//               cout << temp-- << " ";
+//           }
+//           num += row;
+//       }
+//       cout << endl;
+//   }
 
 // Pattern 55
 // 1
@@ -960,54 +1005,97 @@ cin>>n;
 // 4567654
 // 567898765
 
+// for (int row = 1; row <= n; row++) {
+//         // Loop for the increasing numbers (from row to 2*row - 1)
+//     for (int col = row; col < 2 * row; col++) {
+//          cout << col;
+//     }
+//         // Loop for the decreasing numbers (from 2*row - 2 down to row)
+//     for (int col = 2 * row - 2; col >= row; col--) {
+//          cout << col;
+//     }
+//  cout << endl;
+// }
+
 // Pattern 56
 // 1     1
-// 2   2
-// 3 3
-// 4
-// 3 3
-// 2   2
+//  2   2
+//   3 3
+//    4
+//   3 3
+//  2   2
 // 1     1
 
 // Pattern 57
-// 1
-// 2 6
-// 3 7 10
-// 4 8 11 13
-// 5 9 12 14 15
+//       1
+//     2   2
+//   3       3
+// 4           4
+//   3       3
+//     2   2
+//       1
+
+//   for (int row = 1; row <= n; row++) {
+//       for (int col = 1; col <= 2 * n - 1; col++) {
+//           if (col == n - row + 1 || col == n + row - 1)
+//               cout << row;
+//           else
+//               cout << " ";
+//       }
+//       cout << endl;
+//   }
+//   for (int row = n - 1; row >= 1; row--) {
+//       for (int col = 1; col <= 2 * n - 1; col++) {
+//           if (col == n - row + 1 || col == n + row - 1)
+//               cout << row;
+//           else
+//               cout << " ";
+//       }
+//       cout << endl;
+//   }
 
 // Pattern 58
-// 1
-// 1 2 1
-// 1 2 3 2 1
-// 1 2 3 4 3 2 1
-// 1 2 3 4 5 4 3 2 1
-
-// Pattern 59
-// 1
-// 2   2
-// 3       3
-// 4           4
-// 3       3
-// 2   2
-// 1
-
-
-// Pattern 60
 // 1  2  3  4  5
 // 16          6
 // 15          7
 // 14          8
 // 13 12 11 10 9
 
-// Pattern 61
+
+// Pattern 59
 // 3 9 1 7 4
 // 9 1 7 4
 // 1 7 4
 // 7 4
 // 4
 
-// Pattern 62
+//  int N = 39714;
+    
+//     // Step 1: Convert the number to an array of digits
+//     int arr[5];
+//     int i = 0;
+//     while (N > 0) {
+//         arr[i] = N % 10;
+//         N /= 10;
+//         i++;
+//     }
+
+//     // Reverse the array to get the digits in correct order
+//     for (int j = 0; j < i / 2; j++) {
+//         swap(arr[j], arr[i - j - 1]);
+//     }
+
+//     // Step 2: Print the pattern
+//     for (int j = 0; j < i; j++) {
+//         for (int k = j; k < i; k++) {
+//             cout << arr[k] << " ";
+//         }
+//         cout << endl;
+//     }
+
+
+
+// Pattern 60
 // 1
 // 123
 // 12345
@@ -1016,6 +1104,18 @@ cin>>n;
 // 123
 // 1
 
+//   for (int row = 1; row <= n; row++) {
+//       for (int col = 1; col <= 2 * row - 1; col++) {
+//           cout << col;
+//       }
+//       cout << endl;
+//   }
+//   for (int row = n - 1; row >= 1; row--) {
+//       for (int col = 1; col <= 2 * row - 1; col++) {
+//           cout << col;
+//       }
+//       cout << endl;
+//   }
 
 }
 
