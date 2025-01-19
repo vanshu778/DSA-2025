@@ -1,30 +1,77 @@
 #include <iostream>
 #include<vector>
+#include<climits>
+
 using namespace std;
 
 int main() {
 
-  int arr[] = {1,3,5,7,9};
-  int size_a=5;
-  int brr[]={2,4,6,8};
-  int size_b=4;
+  // int arr[] = {1,3,5,7,9};
+  // int size_a=5;
+  // int brr[]={2,4,6,8};
+  // int size_b=4;
 
-  vector<int>ans;
+  // vector<int>ans;
 
-  for(int i=0;i<size_a;i++){
+  // for(int i=0;i<size_a;i++){
+  //   ans.push_back(arr[i]);
+  // }
+
+  // for(int i=0;i<size_b;i++){
+  //   ans.push_back(brr[i]);
+  // }
+
+  // cout<<"Printing ans array"<<endl;
+  // for(int i=0;i<ans.size();i++){
+  //   cout<<ans[i]<<" ";
+  // }
+
+
+//with duplicates
+
+ // Example arrays
+  int arr[] = {1, 2, 4, 6, 8, 10};
+  int size_a = 6;
+  int brr[] = {3, 4, 5, 6};
+  int size_b = 4;
+
+  vector<int> ans;
+  bool hasDuplicate = false;
+
+  // First Loop - Copy Elements of arr to ans
+  for(int i = 0; i < size_a; i++) {
     ans.push_back(arr[i]);
   }
 
-  for(int i=0;i<size_b;i++){
+  // Second Loop - Copy Elements of brr to ans
+  for(int i = 0; i < size_b; i++) {
     ans.push_back(brr[i]);
   }
 
-  cout<<"Printing ans array"<<endl;
-  for(int i=0;i<ans.size();i++){
-    cout<<ans[i]<<" ";
+  // Checking for duplicates using INT_MIN
+  for(int i = 0; i < ans.size(); i++) {
+    if(ans[i] != INT_MIN) {
+      for(int j = i + 1; j < ans.size(); j++) {
+        if(ans[i] == ans[j]) {
+          hasDuplicate = true;
+          // Mark the duplicate elements as INT_MIN
+          ans[j] = INT_MIN;
+        }
+      }
+    }
   }
 
+  // Printing the merged array
+  cout << "Printing ans array:" << endl;
+  for (int i = 0; i < ans.size(); i++) {
+    if (ans[i] != INT_MIN) {
+      cout << ans[i] << " ";
+    }
+  }
+  cout << endl;
+  return 0;
 }
+
 
 /*
 Array Declarations:
